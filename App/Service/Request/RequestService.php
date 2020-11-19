@@ -11,7 +11,7 @@ class RequestService // implements IRequest
     private $typeRequest;
 
     private $error;
-    private $statusCode;
+    public $statusCode;
 
     public $data;
 
@@ -22,7 +22,7 @@ class RequestService // implements IRequest
         $this->typeRequest = $typeRequest;
     }
 
-    public function getRequest() 
+    public function getRequest()
     {
         try {
             $client = new Client();
@@ -40,7 +40,6 @@ class RequestService // implements IRequest
     
     public function isValid():Bool
     {
-
     }
 
     private function mountUrl():string

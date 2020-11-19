@@ -24,17 +24,16 @@ class ApiRepository
         $entry = new EntryModel();
 
         foreach ($this->data["programme"]["entries"] as $key => $value) {
-
             $grade = new GradeModel();
 
-            $grade->setmedia_id($value["media_id"]);
+            $grade->setmediaId($value["media_id"]);
             $grade->settitle($value["title"]);
             $grade->setdescription($value["description"]);
-            $grade->setstart_time($value["start_time"]);
-            $grade->setend_time($value["end_time"]);
-            $grade->sethuman_start_time($value["human_start_time"]);
-            $grade->sethuman_end_time($value["human_end_time"]);
-            $grade->setduration_in_minutes($value["duration_in_minutes"]);
+            $grade->setstartTime($value["start_time"]);
+            $grade->setendTime($value["end_time"]);
+            $grade->sethumanStartTime($value["human_start_time"]);
+            $grade->sethumanEndTime($value["human_end_time"]);
+            $grade->setdurationInMinutes($value["duration_in_minutes"]);
             $grade->setPrograma($value["custom_info"]["Programa"]);
             $grade->setGenero($value["custom_info"]["Genero"]["Descricao"]);
             $grade->setName($value["program"]["name"]);
@@ -59,7 +58,7 @@ class ApiRepository
         
         $hourCurrent = strtotime($datetime->format('H:i:s'));
 
-        if($hourFinal < $hourCurrent) {
+        if ($hourFinal < $hourCurrent) {
             return 1;
         } elseif ($hourCurrent > $hourInitial && $hourCurrent < $hourFinal) {
             return 2;

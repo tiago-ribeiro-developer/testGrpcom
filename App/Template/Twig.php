@@ -17,7 +17,7 @@ class Twig
         $loader = new \Twig\Loader\FilesystemLoader("./App/View/");
         $twig = new \Twig\Environment($loader);
 
-        $twig->addFilter( new \Twig\TwigFilter('cast_to_array', function ($stdClassObject) {
+        $twig->addFilter(new \Twig\TwigFilter('cast_to_array', function ($stdClassObject) {
             $response = array();
             foreach ($stdClassObject as $key => $value) {
                 $response[] = array($key, $value);

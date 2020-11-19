@@ -4,14 +4,14 @@ namespace App\Model;
 
 class GradeModel
 {
-    private $media_id;
+    private $mediaId;
     private $title;
     private $description;
-    private $start_time;
-    private $end_time;
-    private $human_start_time;
-    private $human_end_time;
-    private $duration_in_minutes;
+    private $startTime;
+    private $endTime;
+    private $humanStartTime;
+    private $humanEndTime;
+    private $durationInMinutes;
     private $Programa;
     private $Genero;
     private $Name;
@@ -23,12 +23,11 @@ class GradeModel
 
     public function __construct()
     {
-
     }
 
-    public function getmedia_id()
+    public function getmediaId()
     {
-        return $this->media_id;
+        return $this->mediaId;
     }
 
     public function gettitle()
@@ -41,29 +40,29 @@ class GradeModel
         return $this->description;
     }
 
-    public function getstart_time()
+    public function getstartTime()
     {
-        return $this->start_time;
+        return $this->startTime;
     }
 
-    public function getend_time()
+    public function getendTime()
     {
-        return $this->end_time;
+        return $this->endTime;
     }
 
-    public function gethuman_start_time()
+    public function gethumanStartTime()
     {
-        return $this->human_start_time;
+        return $this->humanStartTime;
     }
 
-    public function gethuman_end_time()
+    public function gethumanEndTime()
     {
-        return $this->human_end_time;
+        return $this->humanEndTime;
     }
 
-    public function getduration_in_minutes()
+    public function getdurationInMinutes()
     {
-        return $this->duration_in_minutes;
+        return $this->durationInMinutes;
     }
 
     public function getPrograma()
@@ -101,9 +100,9 @@ class GradeModel
         return $this->status;
     }
 
-    public function setmedia_id($media_id)
+    public function setmediaId($mediaId)
     {
-        $this->media_id = $media_id;
+        $this->mediaId = $mediaId;
     }
 
     public function settitle($title)
@@ -116,29 +115,29 @@ class GradeModel
         $this->description = $description;
     }
 
-    public function setstart_time($start_time)
+    public function setstartTime($startTime)
     {
-        $this->start_time = $start_time;
+        $this->startTime = $startTime;
     }
 
-    public function setend_time($end_time)
+    public function setendTime($endTime)
     {
-        $this->end_time = $end_time;
+        $this->endTime = $endTime;
     }
 
-    public function sethuman_start_time($human_start_time)
+    public function sethumanStartTime($humanStartTime)
     {
-        $this->human_start_time = $human_start_time;
+        $this->humanStartTime = $humanStartTime;
     }
 
-    public function sethuman_end_time($human_end_time)
+    public function sethumanEndTime($humanEndTime)
     {
-        $this->human_end_time = $human_end_time;
+        $this->humanEndTime = $humanEndTime;
     }
 
-    public function setduration_in_minutes($duration_in_minutes)
+    public function setdurationInMinutes($durationInMinutes)
     {
-        $this->duration_in_minutes = $duration_in_minutes;
+        $this->durationInMinutes = $durationInMinutes;
     }
 
     public function setPrograma($Programa)

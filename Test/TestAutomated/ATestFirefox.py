@@ -41,6 +41,23 @@ def createDiretory(strScreenshots):
         logging.info("Criou o diretorio de "+globalStrDiretory)
     driver.save_screenshot(globalStrDiretory+'/'+strScreenshots)
 
+def selectDate(strDate):
+    driver.find_element_by_id('contentDate').send_keys(strDate)
+    driver.save_screenshot(globalStrDiretory+'/2_dados_de_data.png')
+    logging.info("colocou a dada")
+
+def clickDate():
+    driver.find_element_by_id('searchDate').click()
+    driver.save_screenshot(globalStrDiretory+'/3_dados_retornados.png')
+    logging.info("clicou no botão")
+
+def checkResult():
+    firstCard = driver.find_element_by_xpath("/html/body/div/section/div/div/a/p[1]").text
+    assert "Santa Missa" in firstCard, 'OPS !!! Erro ao validar o primeiro card'
+    logging.info("valida o primeiro card")
+
+
+
 # inicia o script
 if __name__ == "__main__":
 
@@ -51,7 +68,9 @@ if __name__ == "__main__":
     initTimer = timeit.default_timer()
     initBrowserFirefox()
     createDiretory('1_tela_inicial.png')
-
+    selectDate('2020-11-15')
+    clickDate()
+    checkResult()
 
     print('')
     endTimer = timeit.default_timer()

@@ -14,13 +14,11 @@ use App\Repository\ApiRepository;
  */
 Router::get('/', function () {
     try {
-
         $params = input()->all();
 
         $parameterDate = "";
 
-        if( (isset($params["date"])) && ($params["date"] != ""))
-        {
+        if ((isset($params["date"])) && ($params["date"] != "")) {
             $parameterDate = "?date=".$params["date"];
         }
 

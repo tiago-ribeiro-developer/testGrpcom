@@ -9,11 +9,10 @@ class EntryModel
 
     public function __construct()
     {
-
     }
 
-    public function add($value) {
+    public function add($value)
+    {
         $this->items[$this->count++] = $value;
     }
 }
-
