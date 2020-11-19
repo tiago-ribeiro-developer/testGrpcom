@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+    selenium:
+      build: ../../docker/selenium
+      container_name: aprendebrasilon_selenium
+      working_dir: /testAutomated
+      ports:
+          - "8081:81"
+      volumes:
+          - .:/testAutomated
+
