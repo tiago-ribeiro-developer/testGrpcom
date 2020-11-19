@@ -26,14 +26,17 @@
                     <form action="/" method="GET">
                         <div class="field has-addons">
                             <div class="control">
-                                <input name="date" class="input" type="date" placeholder="Digite uma data">
+                                <input id="contentDate" name="date" class="input" type="date" placeholder="Digite uma data">
                             </div>
                             <div class="control">    
-                                <input type="submit" class="button is-info" value="Buscar" />
+                                <input id="searchDate" type="submit" class="button is-info" value="Buscar" />
                             </div>
                         </div>
                     </form>
                 </div>
+                <span class="tag has-background-danger-light is-medium">Anterior</span>
+                <span class="tag has-background-success-light is-medium">Atual</span>
+                <span class="tag has-background-info-light is-medium">Próximo</span>
             </div>
         </section>
         <section class="content tiles">
