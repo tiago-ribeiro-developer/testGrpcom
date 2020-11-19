@@ -17,6 +17,12 @@
                 <div class="about">
                     <p><strong>Tiago Ribeiro, Desenvolvedor Full Stack</strong><br></p>
                     <p>Teste para Grpcom</p>
+                    <div class="navbar-end">
+                        <a href="https://github.com/tiago-ribeiro-developer/testGrpcom"
+                            class="navbar-item is-size-5 ">GitHub</a>
+                        <a href="https://www.linkedin.com/in/tiago-ribeiro-012738b3/"
+                            class="navbar-item is-size-5 ">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -26,9 +32,10 @@
                     <form action="/" method="GET">
                         <div class="field has-addons">
                             <div class="control">
-                                <input id="contentDate" name="date" class="input" type="date" placeholder="Digite uma data">
+                                <input id="contentDate" name="date" class="input" type="date"
+                                    placeholder="Digite uma data">
                             </div>
-                            <div class="control">    
+                            <div class="control">
                                 <input id="searchDate" type="submit" class="button is-info" value="Buscar" />
                             </div>
                         </div>
@@ -45,21 +52,21 @@
                 {% for program in programs %}
                 <div class="column">
                     {% if program.status|e == 1 %}
-                        <a class="box has-background-danger-light" href="{{ program.URLPrograma|e }}" target="_blank">
-                    {% elseif program.status|e == 2 %}
+                    <a class="box has-background-danger-light" href="{{ program.URLPrograma|e }}" target="_blank">
+                        {% elseif program.status|e == 2 %}
                         <a class="box has-background-success-light" href="{{ program.URLPrograma|e }}" target="_blank">
-                    {% else %}
-                        <a class="box has-background-info-light" href="{{ program.URLPrograma|e }}" target="_blank">
-                    {% endif %}
-                        <p class="title is-2">{{ program.title }}</p>
-                        <p class="subtitle is-5 is-marginless">{{ program.Sinopse|e }}</p>
-                        <p class="subtitle is-4 is-marginless has-text-right">{{ program.Category|e }}</p>
-                    </a>
+                            {% else %}
+                            <a class="box has-background-info-light" href="{{ program.URLPrograma|e }}" target="_blank">
+                                {% endif %}
+                                <p class="title is-2">{{ program.title }}</p>
+                                <p class="subtitle is-5 is-marginless">{{ program.Sinopse|e }}</p>
+                                <p class="subtitle is-4 is-marginless has-text-right">{{ program.Category|e }}</p>
+                            </a>
                 </div>
                 {% endfor %}
-                </div>
             </div>
-        </section>
+    </div>
+    </section>
     </div>
 </body>
 
