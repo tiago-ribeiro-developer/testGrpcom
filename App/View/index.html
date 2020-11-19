@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Teste Grpcom</title>
+    <link href="https://klimchuk.com/css/theme.min.69d38f4ce4bdbff2bd8cdab4a91c79617e60f141b3c80a901bceae82d4554391.css"
+        rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="main section">
+        <section class="content intro">
+            <div class="container">
+                <div class="about">
+                    <p><strong>Tiago Ribeiro, Desenvolvedor Full Stack</strong><br></p>
+                    <p>Teste para Grpcom</p>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="column is-4 is-offset-5">
+                    <form action="/" method="GET">
+                        <div class="field has-addons">
+                            <div class="control">
+                                <input name="date" class="input" type="date" placeholder="Digite uma data">
+                            </div>
+                            <div class="control">    
+                                <input type="submit" class="button is-info" value="Buscar" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="content tiles">
+            <div class="container">
+                <div class="columns is-flex"></div>
+                {% for program in programs %}
+                <div class="column">
+                    {% if program.status|e == 1 %}
+                        <a class="box has-background-danger-light" href="{{ program.URLPrograma|e }}" target="_blank">
+                    {% elseif program.status|e == 2 %}
+                        <a class="box has-background-success-light" href="{{ program.URLPrograma|e }}" target="_blank">
+                    {% else %}
+                        <a class="box has-background-info-light" href="{{ program.URLPrograma|e }}" target="_blank">
+                    {% endif %}
+                        <p class="title is-2">{{ program.title }}</p>
+                        <p class="subtitle is-5 is-marginless">{{ program.Sinopse|e }}</p>
+                        <p class="subtitle is-4 is-marginless has-text-right">{{ program.Category|e }}</p>
+                    </a>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

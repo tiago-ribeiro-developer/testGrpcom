@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit>
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory suffix="Test.php">./test/testUnit</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./server</directory>
+        </whitelist>
+    </filter>
+    <php>
+        <env name="URL_ACCOUNT_ON" value="http://api.positivoon.com.br/account/auth"/>
+        <env name="URL_ACCOUNTV2_ON" value="http://api.positivoon.com.br/accountv2/user/authentication"/>
+        <env name="URL_ROLES_ON" value="http://api.positivoon.com.br/user/profiles/users/roles"/>
+    </php>
+</phpunit>

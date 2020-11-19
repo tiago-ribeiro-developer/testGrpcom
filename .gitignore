@@ -1,0 +1,6 @@
+# ides
+.vscode
+.idea
+
+# composer php
+vendor/
